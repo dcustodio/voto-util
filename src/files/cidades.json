@@ -1,0 +1,22 @@
+{
+  "aveiro": { "eleitores": 641355, "deputados": 16 },
+  "beja": { "eleitores": 119112, "deputados": 3 },
+  "braga": { "eleitores": 780228, "deputados": 19 },
+  "bragança": { "eleitores": 134237, "deputados": 3 },
+  "castelo branco": { "eleitores": 163613, "deputados": 4 },
+  "coimbra": { "eleitores": 371791, "deputados": 9 },
+  "évora": { "eleitores": 133414, "deputados": 3 },
+  "faro": { "eleitores": 382622, "deputados": 9 },
+  "guarda": { "eleitores": 141450, "deputados": 3 },
+  "leiria": { "eleitores": 412223, "deputados": 10 },
+  "lisboa": { "eleitores": 1915377, "deputados": 48 },
+  "portalegre": { "eleitores": 93120, "deputados": 2 },
+  "porto": { "eleitores": 1591947, "deputados": 40 },
+  "santarém": { "eleitores": 377315, "deputados": 9 },
+  "setúbal": { "eleitores": 751385, "deputados": 19 },
+  "viana do castelo": { "eleitores": 233527, "deputados": 5 },
+  "vila real": { "eleitores": 208700, "deputados": 5 },
+  "viseu": { "eleitores": 335711, "deputados": 8 },
+  "madeira": { "eleitores": 254553, "deputados": 6 },
+  "açores": { "eleitores": 230082, "deputados": 5 }
+}
