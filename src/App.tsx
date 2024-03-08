@@ -110,8 +110,8 @@ function App() {
     <>
       <h1 className="text-xl mb-4">Voto Útil</h1>
       <main className="relative container mx-auto">
-        <div className="grid grid-cols-12 gap-4 content-center	">
-          <div className="col-span-2">
+        <div className="grid grid-cols-12 gap-4 content-center">
+          <div className="col-span-2 max-sm:col-span-12 max-sm:row-start-2">
             <Card>
               <CardHeader className="bg-stone-100	">
                 <div className="flex flex-col">
@@ -144,18 +144,22 @@ function App() {
               </CardBody>
             </Card>
           </div>
-          <div className="col-span-10 ">
+          <div className="col-span-10 max-sm:col-span-12 max-sm:row-start-1 ">
             <div className="flex flex-col grow mx-auto">
-              <SelectCity />
-              <VoteDistributionTable
-                showAll={showAll}
-                partyVotes={cityPartyVotes}
-                partyDeputees={partyDeputees}
-              />
+              <div className="order-1 max-sm:order-2">
+                <SelectCity />
+              </div>
+              <div className="order-2 max-sm:order-3">
+                <VoteDistributionTable
+                  showAll={showAll}
+                  partyVotes={cityPartyVotes}
+                  partyDeputees={partyDeputees}
+                />
+              </div>
 
-              <div className="my-4">
+              <div className="my-4 order-3 max-sm:order-1">
                 <Card className="py-2">
-                  <CardHeader className="px-4   items-start flex-gap-1">
+                  <CardHeader className="px-4 items-start flex-gap-1">
                     <p className="text-tiny uppercase font-bold">
                       Método D'Hondt
                     </p>
