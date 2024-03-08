@@ -18,5 +18,7 @@
   "vila real": { "eleitores": 208700, "deputados": 5 },
   "viseu": { "eleitores": 335711, "deputados": 8 },
   "madeira": { "eleitores": 254553, "deputados": 6 },
-  "açores": { "eleitores": 230082, "deputados": 5 }
+  "açores": { "eleitores": 230082, "deputados": 5 },
+  "europa": { "eleitores": 937185, "deputados": 2 },
+  "fora da europa": { "eleitores": 609345, "deputados": 2 }
 }
