@@ -31,7 +31,7 @@ export const SelectCity = () => {
             value={cidade}
             textValue={cidade.charAt(0).toUpperCase() + cidade.slice(1)}
           >
-            {cidade}
+            <span className="capitalize">{cidade}</span>
           </SelectItem>
         ))}
       </Select>

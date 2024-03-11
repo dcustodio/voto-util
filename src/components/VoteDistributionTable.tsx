@@ -33,6 +33,11 @@ export const VoteDistributionTable = ({
     }))
   );
 
+  const DENOMINATOR_ARRAY = Array.from(
+    { length: denominators },
+    (_, i) => i + 1
+  );
+
   const renderCell = (item: Row, columnKey: string) => {
     if (columnKey.startsWith("th")) {
       const denominator = Number(columnKey.split("-")[1]);
@@ -71,12 +76,13 @@ export const VoteDistributionTable = ({
       key: "deputados",
       label: "Deputados",
     },
-    ...Array(denominators)
-      .fill(0)
-      .map((_v, i) => ({ key: `th-${i + 1}`, label: `/${i + 1}` })),
+    ...DENOMINATOR_ARRAY.map((i) => ({
+      key: `th-${i}`,
+      label: `/${i}`,
+    })),
   ];
 
-  const getTablerows = () => {
+  const getTableRows = () => {
     return PARTIES.filter((party) => {
       if (showAll) return party;
       // filter small parties out
@@ -92,28 +98,24 @@ export const VoteDistributionTable = ({
         const partyRow: Row = {
           key: index,
           partido: party,
-          deputados: partyDeputees[party],
+          deputados: partyDeputees[party] ?? 0,
         };
 
-        Array(denominators)
-          .fill(0)
-          .forEach((_e, i) => {
-            partyRow[`th-${i + 1}`] = Math.round(
-              partyVotes[party as Party] / (i + 1)
-            );
-          });
+        DENOMINATOR_ARRAY.forEach((i) => {
+          partyRow[`th-${i}`] = Math.round(partyVotes[party as Party] / i);
+        });
 
         return partyRow;
       });
   };
 
-  const rows = getTablerows();
+  const rows = getTableRows();
 
   return (
     <Table>
       <TableHeader columns={tableColumns}>
         {(column) => (
-          <TableColumn key={column.key} align="end">
+          <TableColumn key={column.key} align="center" className="text-center">
             {column.label}
           </TableColumn>
         )}
